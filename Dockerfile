@@ -4,4 +4,4 @@ RUN apt-get update
 RUN apt-get install -y curl bash
 
 
-ENTRYPOINT ["/bin/sh"]
+ENTRYPOINT ["/bin/cat"]
