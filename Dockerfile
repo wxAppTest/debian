@@ -1,7 +1,7 @@
 FROM debian
 
 RUN apt-get update
-RUN apt-get install -y curl bash
+RUN apt-get install -y curl bash ncat
 
-CMD "/bin/cat"
+CMD "nc -vv -l -p 9999"
 #ENTRYPOINT ["/bin/cat"]
