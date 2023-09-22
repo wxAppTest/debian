@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM tutum/dnsutils
 
 RUN apt-get update
 RUN apt-get install -y curl bash
