@@ -1,0 +1,27 @@
+
+version: '3.3'
+
+services:
+   debian_latest:
+     container_name: debian_latest
+     expose:
+      - "80"
+      - "443"
+     build: .
+     volumes:
+       - /:/opt
+     restart: always
+     stdin_open: true
+     tty: true
+     networks:
+      default_network:
+
+volumes:
+    data: {}
+
+networks:
+  default_network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.238.0/24
