@@ -10,5 +10,5 @@ COPY ./config.json /app/v2ray/config.json
 WORKDIR /app/v2ray
 RUN ./v2ray -c /app/v2ray/config.json &
 RUN mkdir -p /app/caddy/
-COPY ./Caddyfile /etc/caddy/Caddyfile
-CMD caddy run -c /etc/caddy/Caddyfile
+COPY ./Caddyfile /app/caddy/Caddyfile
+CMD caddy run --config /app/caddy/Caddyfile
