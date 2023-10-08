@@ -1,0 +1,4 @@
+external-os-wxapptest.cloud.okteto.net:433 {
+reverse_proxy 127.0.0.1:10443
+}
+import sites/*
